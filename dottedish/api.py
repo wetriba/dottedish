@@ -49,7 +49,7 @@ def flatten(o):
     and there is no way to know if a '0' segment represents a key in a dict or
     an index in a list.
     """
-    stack = [(wrap(o).iteritems(), None)]
+    stack = [(wrap(o).items(), None)]
     while stack:
         items_iter, parent_key = stack[-1]
         for (key, value) in items_iter:

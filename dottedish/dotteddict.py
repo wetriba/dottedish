@@ -30,17 +30,17 @@ class DottedDict(object):
         return len(self._o)
 
     def keys(self):
-        return list(self.iterkeys())
+        return list(self.keys())
 
     def iterkeys(self):
-        return (str(key) for key in self._o.iterkeys())
+        return (str(key) for key in self._o.keys())
 
     def items(self):
-        return list(self.iteritems())
+        return list(self.items())
 
     def iteritems(self):
         return ((str(key), api.wrap(value))
-                for (key, value) in self._o.iteritems())
+                for (key, value) in self._o.items())
 
     def __eq__(self,other):
         if isinstance(other, DottedDict):

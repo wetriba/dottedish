@@ -40,13 +40,13 @@ class DottedList(object):
         return len(self._o)
 
     def keys(self):
-        return list(self.iterkeys())
+        return list(self.keys())
 
     def iterkeys(self):
         return (str(i) for i in xrange(len(self._o)))
 
     def items(self):
-        return list(self.iteritems())
+        return list(self.items())
 
     def iteritems(self):
         return ((str(i), api.wrap(value))
